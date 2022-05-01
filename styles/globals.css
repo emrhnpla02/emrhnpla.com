@@ -5,3 +5,8 @@
 * {
   box-sizing: border-box;
 }
+
+#__next,
+main {
+  @apply overflow-hidden w-full h-full m-0 p-0;
+}
