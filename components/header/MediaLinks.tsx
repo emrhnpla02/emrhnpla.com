@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FC } from "react";
 import useSWR from "swr";
 import type { ILink } from "../../pages/api/links";
@@ -12,14 +13,22 @@ const MediaLinks: FC = () => {
       {!error &&
         data?.map(({ id, href, src, name, username }: ILink) => (
           <div key={id} className="relative flex justify-center">
-            <a
+            <motion.a
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                type: "spring",
+                stiffness: 200,
+                duration: 1,
+              }}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="grid place-content-center animate__animated animate__fadeInDown"
+              className="grid place-content-center"
             >
               <img src={src} alt={name} title={username} className="w-6 h-6" />
-            </a>
+            </motion.a>
           </div>
         ))}
     </section>

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@react-spring/parallax": "^9.4.4",
-    "animate.css": "^4.1.1",
+    "framer-motion": "^6.3.3",
     "next": "12.1.5",
     "next-themes": "^0.1.1",
     "react": "18.0.0",

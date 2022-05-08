@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { FC } from "react";
+import { motion } from "framer-motion";
 
 const NavigationLink: FC = () => {
   const { route } = useRouter();
@@ -8,9 +9,16 @@ const NavigationLink: FC = () => {
 
   return (
     <Link href={isOnHomepage ? "/" : "/blog"}>
-      <a className="font-bold tracking-wide text-2xl animate__animated animate__fadeInLeft animate__border hover:animate__borderFromLeft">
+      <motion.a
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: "spring", duration: 1 }}
+        className="cursor-pointer font-bold tracking-wide text-2xl animate__border hover:animate__borderFromLeft"
+        role="link"
+        tabIndex={0}
+      >
         {isOnHomepage ? "Home" : "My Blog"}
-      </a>
+      </motion.a>
     </Link>
   );
 };
