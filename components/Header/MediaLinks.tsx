@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { FC } from "react";
 import useSWR from "swr";
@@ -11,7 +12,7 @@ const MediaLinks: FC = () => {
   return (
     <section className="hidden xs:flex gap-x-10 justify-self-end">
       {!error &&
-        data?.map(({ id, href, src, name, username }: ILink) => (
+        data?.map(({ id, href, icon }: ILink) => (
           <div key={id} className="relative flex justify-center">
             <motion.a
               initial={{ y: -30, opacity: 0 }}
@@ -27,7 +28,7 @@ const MediaLinks: FC = () => {
               rel="noopener noreferrer"
               className="grid place-content-center"
             >
-              <img src={src} alt={name} title={username} className="w-6 h-6" />
+              <Icon icon={icon} className="w-6 h-6" />
             </motion.a>
           </div>
         ))}

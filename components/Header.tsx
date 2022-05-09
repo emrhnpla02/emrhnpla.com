@@ -1,8 +1,8 @@
 import { FC, useContext } from "react";
 import { AppContext } from "./Layout";
-import NavigationLink from "./header/NavigationLink";
-import MediaLinks from "./header/MediaLinks";
-import ToggleThemeButton from "./header/ToggleThemeButton";
+import NavigationLink from "./Header/NavigationLink";
+import MediaLinks from "./Header/MediaLinks";
+import ToggleThemeButton from "./Header/ToggleThemeButton";
 
 const Header: FC = () => {
   const { scrollTop } = useContext(AppContext);

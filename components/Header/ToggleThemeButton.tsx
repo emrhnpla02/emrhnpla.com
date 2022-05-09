@@ -1,20 +1,16 @@
 import { FC, useState, useEffect } from "react";
-import LightmodeIcon from "../icons/lightmodeIcon";
-import DarkmodeIcon from "../icons/darkmodeIcon";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
 
 const ToggleThemeButton: FC = () => {
   const [isMounted, setIsMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  useEffect(() => setIsMounted(true), []);
 
-  const switchTheme = () => {
-    if (isMounted) setTheme(theme === "light" ? "dark" : "light");
-  };
+  const switchTheme = () =>
+    isMounted && setTheme(theme === "light" ? "dark" : "light");
 
   return (
     <motion.button
@@ -24,8 +20,8 @@ const ToggleThemeButton: FC = () => {
       className="relative flex justify-center items-center gap-3 p-1 border rounded-2xl border-nord10 animate__animated animate__fadeInRight"
       onClick={switchTheme}
     >
-      <LightmodeIcon />
-      <DarkmodeIcon />
+      <Icon icon="akar-icons:sun-fill" className="w-6 h-6" />
+      <Icon icon="akar-icons:moon-fill" className="w-6 h-6" />
       <motion.div
         initial={{ left: "0%" }}
         animate={theme === "light" ? { left: "0%" } : { left: "50%" }}
