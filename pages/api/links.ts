@@ -17,10 +17,10 @@ export default function handler(
   res.status(200).json([
     {
       id: 1,
-      name: "Reddit",
-      username: "emrhnpla",
-      src: "/icons/reddit.svg",
-      href: "https://www.reddit.com/user/emrhnpla",
+      name: "Matrix",
+      username: "@emrhnpla02",
+      src: "/icons/matrix.svg",
+      href: "https://matrix.to/#/@emrhnpla02:matrix.org",
     },
     {
       id: 2,
