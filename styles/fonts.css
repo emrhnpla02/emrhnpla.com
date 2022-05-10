@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/firacode.ttf");
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("/fonts/rubik.ttf") src("/fonts/rubikitalic.ttf");
+}
