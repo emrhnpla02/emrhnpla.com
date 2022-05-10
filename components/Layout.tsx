@@ -23,14 +23,14 @@ const Layout: NextPage<IProps> = ({ children }) => {
   });
 
   return (
-    <main className="bg-nord5 dark:bg-nord0 font-rubik text-nord0 dark:text-nord5">
+    <main className="bg-nord5 dark:bg-nord16 font-rubik">
       <Head>
         <title>Emirhan P.</title>
       </Head>
       <AppContext.Provider value={{ scrollTop }}>
         <Header />
         <section
-          className={`relative transition-[top,background-color,color] ${
+          className={`transition-[top,background-color,color] ${
             scrollTop <= 0 ? " top-16" : "top-12"
           } h-full`}
         >

@@ -9,9 +9,9 @@ const Header: FC = () => {
 
   return (
     <header
-      className={`fixed top-0 z-10 w-full  transition-[height,background-color,color] ${
+      className={`fixed top-0 z-10 w-full transition-[height,background-color,color] ${
         scrollTop <= 0 ? " h-16" : "h-12"
-      } flex justify-between items-center px-3 bg-nord5 dark:bg-nord16`}
+      } flex justify-between items-center px-5 bg-nord5 dark:bg-nord16`}
     >
       <NavigationLink />
       <MediaLinks />

@@ -17,7 +17,7 @@ const ToggleThemeButton: FC = () => {
       initial={{ x: 100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ type: "spring", duration: 1 }}
-      className="relative flex justify-center items-center gap-3 p-1 border rounded-2xl border-nord10 animate__animated animate__fadeInRight"
+      className="relative flex justify-center items-center gap-x-3 p-1 border rounded-2xl border-nord10 animate__animated animate__fadeInRight"
       onClick={switchTheme}
     >
       <Icon icon="akar-icons:sun-fill" className="w-6 h-6" />
