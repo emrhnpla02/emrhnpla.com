@@ -17,9 +17,10 @@ const Layout: NextPage<IProps> = ({ children }) => {
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
-    document.querySelector("#parallax")?.addEventListener("scroll", () => {
-      setScrollTop(document.querySelector("#parallax")?.scrollTop ?? 0);
-    });
+    const parallax = document.querySelector("#parallax");
+    parallax?.addEventListener("scroll", () =>
+      setScrollTop(parallax.scrollTop)
+    );
   });
 
   return (
