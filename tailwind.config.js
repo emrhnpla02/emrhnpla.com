@@ -18,5 +18,5 @@ module.exports = {
     },
   },
   darkMode: "class",
-  plugins: [require("tailwind-nord")],
+  plugins: [require("tailwind-nord"), require("tailwind-scrollbar")],
 };
