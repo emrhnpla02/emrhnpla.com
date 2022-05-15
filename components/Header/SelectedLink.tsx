@@ -20,7 +20,7 @@ const SelectedLink: FC<IProps> = ({ selectedLink, selectedLinkAnim }) => {
       animate={selectedLinkAnim}
       transition={{ duration: 0.3 }}
       key="selectedLink"
-      className="absolute text-nord0 dark:text-nord5"
+      className="absolute flex gap-x-1 text-nord0 dark:text-nord5"
     >
       {selectedLink.name}
       <span className="text-nord14"> ➜ </span>
