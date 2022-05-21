@@ -4,5 +4,5 @@
 }
 @font-face {
   font-family: "Rubik";
-  src: url("/fonts/rubik.ttf") src("/fonts/rubikitalic.ttf");
+  src: url("/fonts/rubik.ttf"), url("/fonts/rubikitalic.ttf");
 }
