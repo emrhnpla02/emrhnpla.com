@@ -14,17 +14,17 @@ interface IProps {
 }
 
 interface IAppContext {
-  scrollTop: number;
+  scrollFarFromTop: boolean;
 }
 
-export const AppContext = createContext<IAppContext>({ scrollTop: 0 });
+export const AppContext = createContext<Partial<IAppContext>>({});
 
 const Layout: NextPage<IProps> = ({ children }) => {
-  const [scrollTop, setScrollTop] = useState(0);
+  const [scrollFarFromTop, setScrollFarFromTop] = useState(false);
 
   const handleScroll = useCallback(
-    (parallax: Element) => setScrollTop(parallax.scrollTop),
-    [setScrollTop]
+    (parallax: Element) => setScrollFarFromTop(parallax.scrollTop <= 0),
+    [setScrollFarFromTop]
   );
 
   useEffect(() => {
@@ -39,11 +39,11 @@ const Layout: NextPage<IProps> = ({ children }) => {
       <Head>
         <title>Emirhan P.</title>
       </Head>
-      <AppContext.Provider value={{ scrollTop }}>
+      <AppContext.Provider value={{ scrollFarFromTop }}>
         <Header />
         <section
           className={`transition-[top,background-color,color] ${
-            scrollTop <= 0 ? " top-16" : "top-12"
+            scrollFarFromTop ? " top-16" : "top-12"
           } h-full`}
         >
           {children}

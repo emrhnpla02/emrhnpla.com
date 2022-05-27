@@ -4,7 +4,7 @@ import { AppContext } from "./Layout";
 import SidebarItem from "./Sidebar/SidebarItem";
 
 const Sidebar: FC = () => {
-  const { scrollTop } = useContext(AppContext);
+  const { scrollFarFromTop } = useContext(AppContext);
 
   const variants = {
     hidden: {
@@ -30,8 +30,8 @@ const Sidebar: FC = () => {
       animate="visible"
       exit="hidden"
       className={`fixed transition-[top,height,padding-bottom] ${
-        scrollTop <= 0 ? "top-16 pb-16" : "top-12 pb-12"
-      } right-0 flex flex-col justify-center items-center gap-y-40 w-28 h-full bg-nord10 shadow-xl shadow-nord0 dark:shadow-nord10`}
+        scrollFarFromTop ? "top-16 pb-16" : "top-12 pb-12"
+      } right-0 hidden sb-xl:flex flex-col justify-center items-center gap-y-40 z-10 w-28 h-full bg-nord10 shadow-xl shadow-nord0 dark:shadow-nord10`}
     >
       <SidebarItem page={0} icon="akar-icons:person">
         About Me
