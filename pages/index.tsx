@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Parallax
-        className={`!top-12 !w-[calc(100%-7rem)] ${
+        className={`!top-12 !w-full xl:!w-[calc(100%-7rem)] ${
           !showScrollbar && "!overflow-y-hidden"
         } scrollbar-thin scrollbar-thumb-nord1 hover:scrollbar-thumb-nord0 scrollbar-track-nord10`}
         id="parallax"
