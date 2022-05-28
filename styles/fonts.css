@@ -6,3 +6,7 @@
   font-family: "Rubik";
   src: url("/fonts/rubik.ttf"), url("/fonts/rubikitalic.ttf");
 }
+@font-face {
+  font-family: "Indie Flower";
+  src: url("/fonts/indieflower.ttf");
+}

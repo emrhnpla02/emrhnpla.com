@@ -16,13 +16,25 @@ module.exports = {
         "2xl": "1536px",
         // Layout/Header
         "h-xl": "812px",
+        // AboutMe/Terminal
+        "t-xl": "1164px",
+        // AboutMe/Links
+        "l-xl": "1004px",
+        // AboutMe/Alternate
+        "alt-xl": "800px",
+        "alt-lg": "624px",
+        "alt-md": "354px",
       },
       fontFamily: {
         firacode: "'Fira Code', monospace",
         rubik: "'Rubik', sans-serif",
+        iflower: "'Indie Flower', cursive",
       },
       backgroundColor: {
         nord16: "#242933",
+      },
+      height: {
+        88: "22rem",
       },
     },
   },

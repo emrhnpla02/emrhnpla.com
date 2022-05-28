@@ -30,9 +30,30 @@ export default function handler(
     {
       id: 3,
       name: "Mastodon",
-      username: "@emrhnpla02@mastodon.social",
+      username: "@emrhnpla02",
       icon: "logos:mastodon-icon",
       href: "https://mastodon.social/web/@emrhnpla02",
+    },
+    {
+      id: 4,
+      name: "Reddit",
+      username: "u/emrhnpla",
+      icon: "logos:reddit-icon",
+      href: "https://reddit.com/user/emrhnpla",
+    },
+    {
+      id: 5,
+      name: "Pixelfed",
+      username: "@emrhnpla",
+      icon: "openmoji:pixelfed",
+      href: "https://pixelfed.social/emrhnpla",
+    },
+    {
+      id: 6,
+      name: "Spotify",
+      username: "emrhnpla02",
+      icon: "logos:spotify-icon",
+      href: "https://open.spotify.com/user/8s8mxqnkzgqak32l7tcnuzhs2",
     },
   ]);
 }

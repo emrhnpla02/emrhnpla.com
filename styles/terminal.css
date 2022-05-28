@@ -1,0 +1,3 @@
+.typed-component span {
+  @apply text-nord0 dark:text-nord5;
+}
