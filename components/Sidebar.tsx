@@ -39,7 +39,7 @@ const Sidebar: FC = () => {
         Skills
       </SidebarItem>
       <SidebarItem page={2} icon="la:project-diagram">
-        My Projects
+        Projects
       </SidebarItem>
       <SidebarItem page={3} icon="simple-icons:protonmail">
         Contact

@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           <Skills />
         </ParallaxLayer>
         <ParallaxLayer offset={2} speed={1}>
-          <p>My Projects</p>
+          <p>Projects</p>
         </ParallaxLayer>
         <ParallaxLayer offset={3} speed={1}>
           <p>Contact</p>

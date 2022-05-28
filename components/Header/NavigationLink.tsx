@@ -17,7 +17,7 @@ const NavigationLink: FC = () => {
         role="link"
         tabIndex={0}
       >
-        {isOnHomepage ? "My Blog" : "Home"}
+        {isOnHomepage ? "Blog" : "Home"}
       </motion.a>
     </Link>
   );

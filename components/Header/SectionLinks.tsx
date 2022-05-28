@@ -28,7 +28,7 @@ const SectionLinks: FC<IProps> = ({
           Skills
         </SectionLink>
         <SectionLink page={2} icon="la:project-diagram">
-          My Projects
+          Projects
         </SectionLink>
         <SectionLink page={3} icon="simple-icons:protonmail">
           Contact

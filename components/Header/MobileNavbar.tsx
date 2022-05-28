@@ -31,7 +31,7 @@ const MobileNavbar: FC = () => {
             Skills
           </MobileSectionLink>
           <MobileSectionLink page={2} icon="la:project-diagram">
-            My Projects
+            Projects
           </MobileSectionLink>
           <MobileSectionLink page={3} icon="simple-icons:protonmail">
             Contact

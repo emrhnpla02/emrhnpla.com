@@ -32,7 +32,7 @@ const MobileNavLink: FC<IMobileNavLinkProps> = ({
           className="grow-0 w-10 h-10 transition-[color] duration-300 text-nord0 dark:text-nord5 group-hover:!text-nord10 dark:group-hover:!text-nord8"
         />
         <span className="grow font-bold text-2xl transition-[color] duration-300 text-nord0 dark:text-nord5 group-hover:!text-nord10 dark:group-hover:!text-nord8 animate__border group-hover:animate__borderFromLeft">
-          {isOnHomepage ? "My Blog" : "Home"}
+          {isOnHomepage ? "Blog" : "Home"}
         </span>
       </motion.a>
     </Link>
