@@ -9,7 +9,7 @@ import {
   useCallback,
   Ref,
 } from "react";
-import { IParallax } from "@react-spring/parallax";
+import type { IParallax } from "@react-spring/parallax";
 import Header from "./Header";
 
 interface IProps {

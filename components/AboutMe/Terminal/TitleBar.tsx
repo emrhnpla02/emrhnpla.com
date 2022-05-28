@@ -1,5 +1,5 @@
-import { Icon } from "@iconify/react";
 import { FC, useContext } from "react";
+import { Icon } from "@iconify/react";
 import { AboutMeContext } from "../../AboutMe";
 
 interface IProps {

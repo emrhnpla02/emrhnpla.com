@@ -1,8 +1,8 @@
 import { FC, useState, createContext, useEffect } from "react";
 import useSWR from "swr";
 import { AnimatePresence } from "framer-motion";
-import { fetcher } from "../utils/fetcher";
 import { useWidth } from "../hooks/useWidth";
+import { fetcher } from "../utils/fetcher";
 import type { ILink } from "../pages/api/links";
 import Terminal from "./AboutMe/Terminal";
 import Links from "./AboutMe/Links";

@@ -1,8 +1,8 @@
-import { FC, useContext, useState } from "react";
+import { FC, useState, useContext } from "react";
 import { AboutMeContext } from "../../AboutMe";
+import ShellPrompt from "./ShellPrompt";
 import FetchOutput from "./FetchOutput";
 import ShellMessage from "./ShellMessage";
-import ShellPrompt from "./ShellPrompt";
 
 interface IProps {
   setHighlightButton: (state: boolean) => void;

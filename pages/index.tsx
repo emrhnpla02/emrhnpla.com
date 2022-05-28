@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
+import dynamic from "next/dynamic";
 import { useState, useEffect, useContext } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { AppContext } from "../components/Layout";
-import dynamic from "next/dynamic";
 const AboutMe = dynamic(() => import("../components/AboutMe"), { ssr: false });
 import Sidebar from "../components/Sidebar";
 

@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { FC, useEffect } from "react";
+import { motion } from "framer-motion";
 import ProfilePicture from "../ProfilePicture";
 import OutputItem from "./OutputItem";
 
