@@ -24,6 +24,10 @@ module.exports = {
         "alt-xl": "800px",
         "alt-lg": "624px",
         "alt-md": "354px",
+        // Skills
+        "sk-xl": "1258px",
+        "sk-lg": "934px",
+        "sk-md": "548px",
       },
       fontFamily: {
         firacode: "'Fira Code', monospace",
