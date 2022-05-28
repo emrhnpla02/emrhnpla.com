@@ -45,7 +45,7 @@ const Layout: NextPage<IProps> = ({ children }) => {
         <Header />
         <section
           className={`transition-[top,background-color,color] ${
-            scrollFarFromTop ? " top-16" : "top-12"
+            scrollFarFromTop ? "top-12" : "top-16"
           } h-full`}
         >
           {children}

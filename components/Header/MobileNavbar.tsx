@@ -19,7 +19,7 @@ const MobileNavbar: FC = () => {
       exit={{ height: 0, transition: { delay: 0.3 } }}
       transition={{ duration: 0.3 }}
       className={`absolute transition-[top,background-color,color] ${
-        scrollFarFromTop ? "top-16" : "top-12"
+        scrollFarFromTop ? "top-12" : "top-16"
       } left-0 flex h-xl:hidden flex-col justify-around w-screen px-5 bg-nord5 dark:bg-nord16 shadow-sm shadow-nord0`}
     >
       {isOnHomepage && (
