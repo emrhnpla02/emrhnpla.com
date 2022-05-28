@@ -27,7 +27,7 @@ const SectionLink: FC<IProps> = ({ children, page, icon }) => {
         } transition-[color] duration-300 text-nord0 dark:text-nord5 group-hover:!text-nord10 dark:group-hover:!text-nord8`}
       />
       <AnimatePresence exitBeforeEnter>
-        {scrollFarFromTop && (
+        {!scrollFarFromTop && (
           <motion.span
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
