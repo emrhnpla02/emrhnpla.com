@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import {
-  ReactNode,
+  type ReactNode,
   createContext,
   useState,
   useEffect,
@@ -17,13 +17,15 @@ interface IAppContext {
   scrollFarFromTop: boolean;
 }
 
-export const AppContext = createContext<Partial<IAppContext>>({});
+export const AppContext = createContext<Partial<IAppContext>>({
+  scrollFarFromTop: false,
+});
 
 const Layout: NextPage<IProps> = ({ children }) => {
   const [scrollFarFromTop, setScrollFarFromTop] = useState(false);
 
   const handleScroll = useCallback(
-    (parallax: Element) => setScrollFarFromTop(parallax.scrollTop <= 0),
+    (parallax: Element) => setScrollFarFromTop(parallax.scrollTop > 0),
     [setScrollFarFromTop]
   );
 

@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xs: "500px",
+       // Layout/Header
+        "h-xl":"812px",
       },
       fontFamily: {
         firacode: "'Fira Code', monospace",

@@ -1,20 +1,38 @@
-import { FC, useContext } from "react";
+import { FC, createContext, useState, useContext } from "react";
+import { AnimatePresence } from "framer-motion";
 import { AppContext } from "./Layout";
 import NavigationLink from "./Header/NavigationLink";
-import MediaLinks from "./Header/MediaLinks";
+import SectionLinks from "./Header/SectionLinks";
 import ToggleThemeButton from "./Header/ToggleThemeButton";
+import MobileNavbar from "./Header/MobileNavbar";
+
+interface IHeaderContext {
+  setShowMobileNavbar: (state: boolean) => void;
+}
+
+export const HeaderContext = createContext<Partial<IHeaderContext>>({});
 
 const Header: FC = () => {
-  const {scrollFarFromTop} = useContext(AppContext);
+  const [showMobileNavbar, setShowMobileNavbar] = useState(false);
+
+  const { scrollFarFromTop } = useContext(AppContext);
 
   return (
     <header
       className={`fixed top-0 z-10 w-full transition-[height,background-color,color] ${
-        scrollFarFromTop ? "h-16" : "h-12"
+        scrollFarFromTop ? "h-12" : "h-16"
       } flex justify-between items-center px-5 bg-nord5 dark:bg-nord16 shadow shadow-nord0`}
     >
       <NavigationLink />
-      <MediaLinks />
+      <SectionLinks
+        showMobileNavbar={showMobileNavbar}
+        setShowMobileNavbar={setShowMobileNavbar}
+      />
+      <HeaderContext.Provider value={{ setShowMobileNavbar }}>
+        <AnimatePresence>
+          {showMobileNavbar && <MobileNavbar />}
+        </AnimatePresence>
+      </HeaderContext.Provider>
       <ToggleThemeButton />
     </header>
   );
