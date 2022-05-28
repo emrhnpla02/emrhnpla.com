@@ -31,7 +31,7 @@ const Sidebar: FC = () => {
       exit="hidden"
       className={`fixed transition-[top,height,padding-bottom] ${
         scrollFarFromTop ? "top-16 pb-16" : "top-12 pb-12"
-      } right-0 hidden sb-xl:flex flex-col justify-center items-center gap-y-40 z-10 w-28 h-full bg-nord10 shadow-xl shadow-nord0 dark:shadow-nord10`}
+      } right-0 hidden xl:flex flex-col justify-center items-center gap-y-40 z-10 w-28 h-full bg-nord10 shadow-xl shadow-nord0 dark:shadow-nord10`}
     >
       <SidebarItem page={0} icon="akar-icons:person">
         About Me
