@@ -31,9 +31,10 @@ export const slide: Variants = {
     y: 0,
     opacity: 1,
   },
-  transition: {
-    type: "spring",
-    stiffness: 1000,
-    damping: 300,
-  },
+};
+
+export const slideTransition = {
+  type: "spring",
+  stiffness: 1000,
+  damping: 300,
 };

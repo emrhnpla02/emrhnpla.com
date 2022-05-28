@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { slide } from "../../utils/variants";
+import { slide, slideTransition } from "../../utils/variants";
 import AlternatePP from "./AlternatePP";
 import Links from "./Alternate/Links";
 
@@ -15,7 +15,7 @@ const Alternate: FC = () => {
           initial="left"
           animate="horizontalIn"
           exit="hidden"
-          transition={{ delay: 0.5, ...slide.transition }}
+          transition={{ delay: 0.5, ...slideTransition }}
           className="flex items-center font-iflower font-bold text-4xl alt-md:text-6xl alt-xl:!text-9xl text-nord10 dark:text-nord8"
         >
           Emirhan Pala
@@ -25,7 +25,7 @@ const Alternate: FC = () => {
           initial="left"
           animate="horizontalIn"
           exit="hidden"
-          transition={{ delay: 1, ...slide.transition }}
+          transition={{ delay: 1, ...slideTransition }}
           className="flex items-center font-iflower text-2xl alt-xl:text-4xl text-nord0 dark:text-nord5"
         >
           <img
@@ -46,7 +46,7 @@ const Alternate: FC = () => {
         initial="bottom"
         animate="verticalIn"
         exit="hidden"
-        transition={{ delay: 1.5, ...slide.transition }}
+        transition={{ delay: 1.5, ...slideTransition }}
         className="relative shadow-inner shadow-nord0 dark:shadow-transparent mx-3"
       >
         <div className="absolute top-0 left-0 w-4/6 h-1/2 border-t-2 border-l-2 border-nord10 dark:border-nord8"></div>

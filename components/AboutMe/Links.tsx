@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { AboutMeContext } from "../AboutMe";
 import type { ILink } from "../../pages/api/links";
-import { slide } from "../../utils/variants";
+import { slide, slideTransition } from "../../utils/variants";
 
 const Links: FC = () => {
   const { links } = useContext(AboutMeContext);
@@ -16,7 +16,7 @@ const Links: FC = () => {
           initial="right"
           animate="horizontalIn"
           exit="right"
-          transition={slide.transition}
+          transition={slideTransition}
           key={id}
           href={href}
           target="_blank"
