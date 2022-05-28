@@ -6,8 +6,16 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-       // Layout/Header
-        "h-xl":"812px",
+        // Tailwind Defualts
+        "2xs": "300px",
+        xs: "500px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+        // Layout/Header
+        "h-xl": "812px",
       },
       fontFamily: {
         firacode: "'Fira Code', monospace",
