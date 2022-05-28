@@ -1,4 +1,6 @@
-export const slide = {
+import { Variants } from "framer-motion";
+
+export const slide: Variants = {
   hidden: {
     opacity: 0,
   },
