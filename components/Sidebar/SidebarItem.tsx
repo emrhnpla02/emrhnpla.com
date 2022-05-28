@@ -1,6 +1,6 @@
-import { Icon } from "@iconify/react";
 import { FC, useContext } from "react";
-import { SidebarContext } from "../../pages";
+import { Icon } from "@iconify/react";
+import { AppContext } from "../Layout";
 
 interface IProps {
   page: number;
@@ -9,12 +9,12 @@ interface IProps {
 }
 
 const SidebarItem: FC<IProps> = ({ children, page, icon }) => {
-  const { handleScroll } = useContext(SidebarContext);
+  const { scrollTo } = useContext(AppContext);
 
   return (
     <div
-      className="flex flex-col items-center gap-y-2 cursor-pointer group"
-      onClick={() => handleScroll && handleScroll(page)}
+      className="flex flex-col items-center gap-y-2 cursor-pointer group first:pt-10 last:pb-10"
+      onClick={() => scrollTo && scrollTo(page)}
     >
       <Icon
         icon={icon}
@@ -26,4 +26,5 @@ const SidebarItem: FC<IProps> = ({ children, page, icon }) => {
     </div>
   );
 };
+
 export default SidebarItem;

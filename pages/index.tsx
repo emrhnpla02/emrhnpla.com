@@ -1,23 +1,16 @@
 import type { NextPage } from "next";
-import { useRef, createContext, useState, useEffect } from "react";
-import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { useState, useEffect, useContext } from "react";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { AppContext } from "../components/Layout";
 import Sidebar from "../components/Sidebar";
-
-interface ISidebarContext {
-  handleScroll: (page: number) => void;
-}
-
-export const SidebarContext = createContext<Partial<ISidebarContext>>({});
 
 const Home: NextPage = () => {
   const [showScrollbar, setShowScrollbar] = useState(false);
-  const parallaxRef = useRef<IParallax>(null);
+  const { parallaxRef } = useContext(AppContext);
 
   useEffect(() => {
     setTimeout(() => setShowScrollbar(true), 2000);
   }, []);
-
-  const handleScroll = (page: number) => parallaxRef?.current?.scrollTo(page);
 
   return (
     <>
@@ -42,9 +35,7 @@ const Home: NextPage = () => {
           <p>Contact</p>
         </ParallaxLayer>
       </Parallax>
-      <SidebarContext.Provider value={{ handleScroll }}>
-        <Sidebar />
-      </SidebarContext.Provider>
+      <Sidebar />
     </>
   );
 };

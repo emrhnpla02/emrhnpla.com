@@ -5,8 +5,11 @@ import {
   createContext,
   useState,
   useEffect,
+  useRef,
   useCallback,
+  Ref,
 } from "react";
+import { IParallax } from "@react-spring/parallax";
 import Header from "./Header";
 
 interface IProps {
@@ -14,7 +17,9 @@ interface IProps {
 }
 
 interface IAppContext {
+  parallaxRef: Ref<IParallax>;
   scrollFarFromTop: boolean;
+  scrollTo: (page: number) => void;
 }
 
 export const AppContext = createContext<Partial<IAppContext>>({
@@ -23,6 +28,9 @@ export const AppContext = createContext<Partial<IAppContext>>({
 
 const Layout: NextPage<IProps> = ({ children }) => {
   const [scrollFarFromTop, setScrollFarFromTop] = useState(false);
+  const parallaxRef = useRef<IParallax>(null);
+
+  const scrollTo = (page: number) => parallaxRef?.current?.scrollTo(page);
 
   const handleScroll = useCallback(
     (parallax: Element) => setScrollFarFromTop(parallax.scrollTop > 0),
@@ -30,7 +38,7 @@ const Layout: NextPage<IProps> = ({ children }) => {
   );
 
   useEffect(() => {
-    const parallax = document.querySelector("#parallax");
+    const parallax = parallaxRef?.current?.container.current;
     parallax?.addEventListener("scroll", () => handleScroll(parallax));
     return () =>
       parallax?.removeEventListener("scroll", () => handleScroll(parallax));
@@ -41,7 +49,7 @@ const Layout: NextPage<IProps> = ({ children }) => {
       <Head>
         <title>Emirhan P.</title>
       </Head>
-      <AppContext.Provider value={{ scrollFarFromTop }}>
+      <AppContext.Provider value={{ parallaxRef, scrollFarFromTop, scrollTo }}>
         <Header />
         <section
           className={`transition-[top,background-color,color] ${
