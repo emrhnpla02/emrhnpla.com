@@ -15,7 +15,7 @@ const SkillCategory: FC<IProps> = ({ categoryName, description, skills }) => {
       initial={{ opacity: 0, y: 70 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1, delay: 0.5 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
       className="sk-lg:last:col-span-3 last:order-none sk-md:last:-order-1 sk-lg:last:!order-none flex flex-col items-center justify-between gap-y-10 w-11/12 sk-xl:w-8/12 h-full py-4 bg-nord4 dark:bg-nord0 border rounded-lg border-nord0 dark:border-nord1 hover:!border-nord10 shadow-sm shadow-nord0 group"
     >
       <h2 className="px-7 font-bold text-center text-3xl transition-[color] text-nord0 dark:text-nord5 group-hover:text-nord10 group-hover:dark:text-nord8 animate__border group-hover:animate__borderDefault">
