@@ -1,4 +1,4 @@
-import { FC, useState, createContext, useEffect } from "react";
+import { FC, createContext, useState, useEffect } from "react";
 import useSWR from "swr";
 import { AnimatePresence } from "framer-motion";
 import { useWidth } from "../hooks/useWidth";
