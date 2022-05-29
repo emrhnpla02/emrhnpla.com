@@ -8,7 +8,7 @@ const Skills: FC = () => {
   const { data, error } = useSWR<ISkills>("/api/skills", fetcher);
 
   return (
-    <section className="grid grid-rows-1 grid-cols-1 sk-md:grid-cols-2 sk-lg:!grid-cols-3 place-items-center gap-y-10 pt-7">
+    <section className="grid grid-rows-1 grid-cols-1 sk-md:grid-cols-2 sk-lg:!grid-cols-3 place-items-center gap-y-10 pt-3">
       {!error && (
         <>
           <SkillCategory
