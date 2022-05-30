@@ -5,6 +5,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { AppContext } from "../components/Layout";
 const AboutMe = dynamic(() => import("../components/AboutMe"), { ssr: false });
 import Skills from "../components/Skills";
+import Projects from "../components/Projects";
 import Sidebar from "../components/Sidebar";
 
 const Home: NextPage = () => {
@@ -32,7 +33,7 @@ const Home: NextPage = () => {
           <Skills />
         </ParallaxLayer>
         <ParallaxLayer offset={2} speed={1}>
-          <p>Projects</p>
+          <Projects />
         </ParallaxLayer>
         <ParallaxLayer offset={3} speed={1}>
           <p>Contact</p>

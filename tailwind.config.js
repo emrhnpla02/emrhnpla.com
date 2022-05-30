@@ -28,6 +28,11 @@ module.exports = {
         "sk-xl": "1258px",
         "sk-lg": "934px",
         "sk-md": "548px",
+        // Projects
+        "p-xl": "1228px",
+        "p-lg": "1030px",
+        "p-md": "716px",
+        "p-sm": "500px",
       },
       fontFamily: {
         firacode: "'Fira Code', monospace",
