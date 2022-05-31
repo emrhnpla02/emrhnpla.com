@@ -23,7 +23,7 @@ const SectionLink: FC<IProps> = ({ children, page, icon }) => {
       <Icon
         icon={icon}
         className={`${
-          scrollFarFromTop ? "w-5 h-5" : "w-8 h-8"
+          scrollFarFromTop ? "w-8 h-8" : "w-5 h-5"
         } transition-[color] duration-300 text-nord0 dark:text-nord5 group-hover:!text-nord10 dark:group-hover:!text-nord8`}
       />
       <AnimatePresence exitBeforeEnter>
