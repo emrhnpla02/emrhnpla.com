@@ -30,7 +30,7 @@ const AboutMe: FC = () => {
   }, [window.innerWidth]);
 
   return (
-    <section className="flex flex-row pt-16 pb-3">
+    <section className="flex flex-row pt-12 pb-3">
       <AboutMeContext.Provider
         value={{ setShowAlternate, setShowLinks, links: data }}
       >

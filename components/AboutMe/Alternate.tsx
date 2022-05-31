@@ -1,10 +1,13 @@
 import { FC } from "react";
+import { useParallaxController } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import { slide, slideTransition } from "../../utils/variants";
 import AlternatePP from "./AlternatePP";
 import Links from "./Alternate/Links";
 
 const Alternate: FC = () => {
+  const parallaxController = useParallaxController();
+
   return (
     <div className="relative flex flex-col items-center gap-y-14 w-full h-[50rem] mt-5">
       <AlternatePP />
@@ -29,6 +32,7 @@ const Alternate: FC = () => {
           className="flex items-center font-iflower text-2xl alt-xl:text-4xl text-nord0 dark:text-nord5"
         >
           <img
+            onLoad={() => parallaxController?.update()}
             src="/catprogramming.gif"
             className="w-12 h-12 alt-xl:w-20 alt-xl:h-20 mr-3"
           />
@@ -36,6 +40,7 @@ const Alternate: FC = () => {
           <span className="mx-3 text-nord8">•</span>
           <span>Linux Elitist</span>
           <img
+            onLoad={() => parallaxController?.update()}
             src="/tux.gif"
             className="w-8 h-8 alt-xl:w-12 alt-xl:h-12 alt-md:ml-3"
           />

@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import useSWR from "swr";
+import { useParallaxController } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { fetcher } from "../utils/fetcher";
@@ -12,6 +13,8 @@ const Projects: FC = () => {
     fetcher
   );
 
+  const parallaxController = useParallaxController();
+
   const renderTools = (
     { name: toolName, icon: toolIcon }: ITool,
     toolsIndex: number
@@ -22,7 +25,7 @@ const Projects: FC = () => {
         toolsIndex % 2 === 0
           ? "last:col-span-2 p-sm:last:col-span-1 p-xl:!last:col-span-2"
           : ""
-      } flex flex-col items-center gap-y-3`}
+      } flex flex-col items-center gap-y-3 `}
     >
       <Icon icon={toolIcon} className="w-12 h-12" />
       <span className="text-lg">{toolName}</span>
@@ -48,6 +51,7 @@ const Projects: FC = () => {
               <div className="relative w-full p-md:w-7/12 h-max p-md:aspect-video shadow-inner shadow-nord0 dark:shadow-transparent">
                 <div className="absolute top-0 left-0 hidden p-sm:block w-4/6 h-1/2 border-t-2 border-l-2 border-nord10 dark:border-nord8"></div>
                 <img
+                  onLoad={() => parallaxController?.update()}
                   src={imageUrl}
                   alt={name}
                   className="relative z-10 w-full h-full px-1 p-sm:px-7 p-lg:!px-14 py-1 p-sm:py-4 p-lg:!py-7"

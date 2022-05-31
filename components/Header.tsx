@@ -19,7 +19,7 @@ const Header: FC = () => {
 
   return (
     <header
-      className={`fixed top-0 z-10 w-full transition-[height,background-color,color] ${
+      className={`fixed top-0 z-50 w-full transition-[height,background-color,color] ${
         scrollFarFromTop ? "h-12" : "h-16"
       } flex justify-between items-center px-5 bg-nord5 dark:bg-nord16 shadow shadow-nord0`}
     >

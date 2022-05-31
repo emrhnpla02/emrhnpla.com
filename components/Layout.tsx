@@ -2,14 +2,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import {
   type ReactNode,
+  type Ref,
   createContext,
   useState,
   useEffect,
-  useRef,
   useCallback,
-  Ref,
+  useRef,
 } from "react";
-import type { IParallax } from "@react-spring/parallax";
 import Header from "./Header";
 
 interface IProps {
@@ -17,47 +16,50 @@ interface IProps {
 }
 
 interface IAppContext {
-  parallaxRef: Ref<IParallax>;
+  parallaxContainerRef: Ref<HTMLDivElement>;
   scrollFarFromTop: boolean;
   scrollTo: (page: number) => void;
 }
 
-export const AppContext = createContext<Partial<IAppContext>>({
-  scrollFarFromTop: false,
-});
+export const AppContext = createContext<Partial<IAppContext>>({});
 
 const Layout: NextPage<IProps> = ({ children }) => {
   const [scrollFarFromTop, setScrollFarFromTop] = useState(false);
-  const parallaxRef = useRef<IParallax>(null);
+  const parallaxContainerRef = useRef<HTMLDivElement>(null);
 
-  const scrollTo = (page: number) => parallaxRef?.current?.scrollTo(page);
+  const scrollTo = useCallback(
+    (section: number) =>
+      parallaxContainerRef.current?.children[section].scrollIntoView(),
+    [parallaxContainerRef]
+  );
 
   const handleScroll = useCallback(
-    (parallax: Element) => setScrollFarFromTop(parallax.scrollTop > 0),
-    [setScrollFarFromTop]
+    () =>
+      setScrollFarFromTop((parallaxContainerRef.current?.scrollTop ?? 0) > 0),
+    [parallaxContainerRef, setScrollFarFromTop]
   );
 
   useEffect(() => {
-    const parallax = parallaxRef?.current?.container.current;
-    parallax?.addEventListener("scroll", () => handleScroll(parallax));
+    const parallaxContainer = parallaxContainerRef.current;
+    parallaxContainer?.addEventListener("scroll", () => handleScroll());
     return () =>
-      parallax?.removeEventListener("scroll", () => handleScroll(parallax));
+      parallaxContainer?.removeEventListener("scroll", () => handleScroll());
   }, []);
 
   return (
-    <main className="bg-nord5 dark:bg-nord16 font-rubik">
+    <main className="relative h-full bg-nord5 dark:bg-nord16 font-rubik">
       <Head>
         <title>Emirhan P.</title>
       </Head>
-      <AppContext.Provider value={{ parallaxRef, scrollFarFromTop, scrollTo }}>
+      <AppContext.Provider
+        value={{
+          parallaxContainerRef,
+          scrollFarFromTop,
+          scrollTo,
+        }}
+      >
         <Header />
-        <section
-          className={`transition-[top,background-color,color] ${
-            scrollFarFromTop ? "top-12" : "top-16"
-          } h-full`}
-        >
-          {children}
-        </section>
+        {children}
       </AppContext.Provider>
     </main>
   );
