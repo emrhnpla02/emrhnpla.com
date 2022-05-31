@@ -6,7 +6,7 @@ import type { ISkill } from "../../pages/api/skills";
 interface IProps {
   categoryName: string;
   description: string;
-  skills: ISkill[] | undefined;
+  skills: ISkill[];
 }
 
 const SkillCategory: FC<IProps> = ({ categoryName, description, skills }) => {

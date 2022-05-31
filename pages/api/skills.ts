@@ -11,7 +11,7 @@ export interface ISkill {
   id: number;
   name: string;
   icon: string;
-  color: string | undefined;
+  color?: string;
 }
 
 export default function handler(
@@ -24,31 +24,26 @@ export default function handler(
         id: 1,
         name: "Html",
         icon: "vscode-icons:file-type-html",
-        color: undefined,
       },
       {
         id: 2,
         name: "Css",
         icon: "vscode-icons:file-type-css",
-        color: undefined,
       },
       {
         id: 3,
         name: "Javascript",
         icon: "vscode-icons:file-type-js-official",
-        color: undefined,
       },
       {
         id: 4,
         name: "Typescript",
         icon: "vscode-icons:file-type-typescript-official",
-        color: undefined,
       },
       {
         id: 5,
         name: "C#",
         icon: "logos:c-sharp",
-        color: undefined,
       },
     ],
     frontend: [
@@ -56,19 +51,16 @@ export default function handler(
         id: 1,
         name: "Tailwindcss",
         icon: "logos:tailwindcss-icon",
-        color: undefined,
       },
       {
         id: 2,
         name: "React",
         icon: "vscode-icons:file-type-reactjs",
-        color: undefined,
       },
       {
         id: 3,
         name: "Nextjs",
         icon: "logos:nextjs-icon",
-        color: undefined,
       },
     ],
     backend: [
@@ -76,19 +68,16 @@ export default function handler(
         id: 1,
         name: "Nodejs",
         icon: "logos:nodejs-icon",
-        color: undefined,
       },
       {
         id: 2,
         name: "Postgresql",
         icon: "logos:postgresql",
-        color: undefined,
       },
       {
         id: 3,
         name: "Redis",
         icon: "logos:redis",
-        color: undefined,
       },
     ],
     devEnv: [
@@ -96,13 +85,11 @@ export default function handler(
         id: 1,
         name: "Git",
         icon: "logos:git-icon",
-        color: undefined,
       },
       {
         id: 2,
         name: "GitHub",
         icon: "logos:github-icon",
-        color: undefined,
       },
       {
         id: 3,
@@ -114,13 +101,11 @@ export default function handler(
         id: 4,
         name: "Linux",
         icon: "logos:linux-tux",
-        color: undefined,
       },
       {
         id: 5,
         name: "Arch",
         icon: "logos:archlinux",
-        color: undefined,
       },
     ],
   });
