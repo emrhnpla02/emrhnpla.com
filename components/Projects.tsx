@@ -23,7 +23,7 @@ const Projects: FC = () => {
       key={toolName}
       className={`${
         toolsIndex % 2 === 0
-          ? "last:col-span-2 p-sm:last:col-span-1 p-xl:!last:col-span-2"
+          ? "last:col-span-2 p-sm:last:col-span-1 p-xl:last:!col-span-2"
           : ""
       } flex flex-col items-center gap-y-3 `}
     >
