@@ -22,7 +22,7 @@ const AboutMe: FC = () => {
   const width = useWidth();
   const LAYOUT_SCREEN_MEDIUM = 768;
 
-  const { data } = useSWR("/api/links", fetcher);
+  const { data: links } = useSWR("/api/links", fetcher);
 
   useEffect(() => {
     if (width < LAYOUT_SCREEN_MEDIUM) setShowAlternate(true);
@@ -32,7 +32,7 @@ const AboutMe: FC = () => {
   return (
     <section className="flex flex-row pt-12 pb-3">
       <AboutMeContext.Provider
-        value={{ setShowAlternate, setShowLinks, links: data }}
+        value={{ setShowAlternate, setShowLinks, links }}
       >
         <AnimatePresence exitBeforeEnter>
           {!showAlternate ? (
