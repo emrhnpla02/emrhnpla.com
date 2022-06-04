@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 const AboutMe = dynamic(() => import("../components/AboutMe"), { ssr: false });
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
-import Sidebar from "../components/Sidebar";
+import Contact from "../components/Contact";
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <AboutMe />
       <Skills />
       <Projects />
-      <section>Contact</section>
+      <Contact />
     </>
   );
 };

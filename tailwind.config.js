@@ -33,11 +33,20 @@ module.exports = {
         "p-lg": "1030px",
         "p-md": "716px",
         "p-sm": "500px",
+        // Contact
+        "c-xl": "1500px",
+        "c-lg": "1432px",
+        "c-md": "892px",
+        "c-sm": "500px",
       },
       fontFamily: {
         firacode: "'Fira Code', monospace",
         rubik: "'Rubik', sans-serif",
         iflower: "'Indie Flower', cursive",
+      },
+      colors: {
+        session: "#14F473",
+        protonmail: "#1B1340",
       },
       backgroundColor: {
         nord16: "#242933",

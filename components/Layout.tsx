@@ -9,8 +9,10 @@ import {
   useRef,
 } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { ToastContainer } from "react-toastify";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import "react-toastify/dist/ReactToastify.min.css";
 
 interface IProps {
   children: ReactNode;
@@ -85,6 +87,18 @@ const Layout: NextPage<IProps> = ({ children }) => {
         </section>
         <Sidebar />
       </AppContext.Provider>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        draggableDirection="y"
+        pauseOnHover
+      />
     </main>
   );
 };
