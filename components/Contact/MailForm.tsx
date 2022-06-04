@@ -158,7 +158,7 @@ const MailForm: FC = () => {
         </div>
         <button
           type="submit"
-          className="px-5 py-3 transition-[color,border-color] duration-300 text-nord5 hover:text-nord1 dark:hover:text-nord10 border border-nord5 hover:border-nord10"
+          className="px-5 py-3 transition-[color,border-color] duration-300 text-nord5 hover:text-nord8 dark:hover:text-nord10 border border-nord5 hover:border-nord8"
         >
           Send!
         </button>
