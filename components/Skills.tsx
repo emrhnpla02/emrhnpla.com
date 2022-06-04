@@ -27,7 +27,7 @@ const Skills: FC = () => {
             description="Backend Techs I prefer to work with"
           />
           <SkillCategory
-            categoryName="Developement Environment"
+            categoryName="Development Environment"
             skills={data?.devEnv}
             description="Tools I use for web development"
           />
