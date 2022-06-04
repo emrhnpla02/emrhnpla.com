@@ -2,21 +2,21 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import {
   type ReactNode,
-  type Ref,
   createContext,
   useState,
   useEffect,
   useCallback,
   useRef,
 } from "react";
+import { ParallaxProvider } from "react-scroll-parallax";
 import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 interface IProps {
   children: ReactNode;
 }
 
-interface IAppContext {
-  parallaxContainerRef: Ref<HTMLDivElement>;
+export interface IAppContext {
   scrollFarFromTop: boolean;
   scrollTo: (page: number) => void;
 }
@@ -25,7 +25,18 @@ export const AppContext = createContext<Partial<IAppContext>>({});
 
 const Layout: NextPage<IProps> = ({ children }) => {
   const [scrollFarFromTop, setScrollFarFromTop] = useState(false);
-  const parallaxContainerRef = useRef<HTMLDivElement>(null);
+  const [showScrollbar, setShowScrollbar] = useState(false);
+  const [parallaxContainer, setParallaxContainer] = useState<HTMLElement>();
+  const parallaxContainerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    setTimeout(() => setShowScrollbar(true), 2000);
+  }, []);
+
+  useEffect(() => {
+    if (parallaxContainerRef.current !== null)
+      setParallaxContainer(parallaxContainerRef.current);
+  }, []);
 
   const scrollTo = useCallback(
     (section: number) =>
@@ -51,15 +62,28 @@ const Layout: NextPage<IProps> = ({ children }) => {
       <Head>
         <title>Emirhan P.</title>
       </Head>
-      <AppContext.Provider
-        value={{
-          parallaxContainerRef,
-          scrollFarFromTop,
-          scrollTo,
-        }}
-      >
+      <AppContext.Provider value={{ scrollFarFromTop, scrollTo }}>
         <Header />
-        {children}
+        <section
+          className={`fixed transition-[top,background-color,color] ${
+            scrollFarFromTop
+              ? "top-12 h-[calc(100%-3rem)]"
+              : "top-16 h-[calc(100%-4rem)]"
+          } grid grid-cols-1 gap-y-[40rem] w-full xl:w-[calc(100%-7rem)] ${
+            showScrollbar ? "overflow-y-scroll" : "overflow-y-hidden"
+          } scroll-smooth scrollbar-thin scrollbar-thumb-nord1 hover:scrollbar-thumb-nord0 scrollbar-track-nord10`}
+          id="parallax"
+          ref={parallaxContainerRef}
+        >
+          {/* @ts-ignore */}
+          <ParallaxProvider
+            scrollContainer={parallaxContainer}
+            scrollAxis="vertical"
+          >
+            {children}
+          </ParallaxProvider>
+        </section>
+        <Sidebar />
       </AppContext.Provider>
     </main>
   );
