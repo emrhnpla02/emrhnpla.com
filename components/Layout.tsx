@@ -98,6 +98,7 @@ const Layout: NextPage<IProps> = ({ children }) => {
         draggable
         draggableDirection="y"
         pauseOnHover
+        limit={2}
       />
     </main>
   );
