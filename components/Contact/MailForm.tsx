@@ -29,13 +29,13 @@ const MailForm: FC = () => {
         subject: Yup.string()
           .trim("Cannot include leading and trailing spaces")
           .min(10, "Must be 15-55 characters")
-          .max(55, "Must be 15-55 characters")
+          .max(255, "Must be 15-255 characters")
           .required("Required"),
 
         message: Yup.string()
           .trim("Cannot include leading and trailing spaces")
           .min(55, "Must be 55-255 characters")
-          .max(255, "Must be 55-255 characters")
+          .max(1024, "Must be 55-1024 characters")
           .required("Required"),
       })}
       onSubmit={(values, { setSubmitting, resetForm }) => {
