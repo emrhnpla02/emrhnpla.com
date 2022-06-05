@@ -38,7 +38,7 @@ const MailForm: FC = () => {
           .max(255, "Must be 55-255 characters")
           .required("Required"),
       })}
-      onSubmit={(values, { setSubmitting }) => {
+      onSubmit={(values, { setSubmitting, resetForm }) => {
         const emailReq = axios({
           method: "post",
           url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
@@ -48,12 +48,14 @@ const MailForm: FC = () => {
           data: values,
         });
 
-        toast.promise(emailReq, {
-          pending: "Sending email",
-          success: "Email sent successfuly.",
-          error:
-            "Oops... A problem has occurred while sending email. Please try later again. 🙁",
-        });
+        toast
+          .promise(emailReq, {
+            pending: "Sending email...",
+            success: "Email sent successfuly!",
+            error:
+              "Oops... A problem has occurred while sending email. Please try later again. 🙁",
+          })
+          .then((res) => res.status === 200 && resetForm());
         setSubmitting(false);
       }}
     >
