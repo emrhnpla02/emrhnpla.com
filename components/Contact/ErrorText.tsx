@@ -8,7 +8,7 @@ interface IProps {
 const ErrorText: FC<IProps> = ({ children, className }) => {
   return (
     <p
-      className={`${className} pr-3 pt-2 text-base text-nord5 dark:text-nord11`}
+      className={`${className} pt-2 text-base text-red-600 dark:text-nord11`}
     >
       {children}
     </p>
