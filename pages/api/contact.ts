@@ -1,12 +1,27 @@
-import nodemailer from "nodemailer";
 import type { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+  );
+  if (req.method === "OPTIONS") {
+    res.status(200).end();
+    return;
+  }
+
   const { name, email, subject, message } = req.body;
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    port: 645,
+    port: 465,
     secure: true,
     auth: {
       user: process.env.USER,
@@ -17,6 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   transporter
     .sendMail({
       from: email,
+      to: "emrhnpla02@gmail.com",
       subject: `Contact form submission from ${name}`,
       html: `
        <p>You have a new contact form submission</p><br>
@@ -32,3 +48,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(400).json(err);
     });
 }
+
+export const config = {
+  api: {
+    externalResolver: true,
+  },
+};
