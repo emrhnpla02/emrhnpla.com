@@ -9,7 +9,7 @@ const Alternate: FC = () => {
   const parallaxController = useParallaxController();
 
   return (
-    <div className="relative flex flex-col items-center gap-y-14 w-full h-[50rem] mt-5">
+    <div className="relative flex flex-col items-center gap-y-14 w-full max-h-[50rem] mt-5">
       <AlternatePP />
       <Links />
       <div className="flex flex-col gap-y-3 alt-md:gap-y-0 items-center">
