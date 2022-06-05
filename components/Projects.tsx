@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { fetcher } from "../utils/fetcher";
 import type { IProject, ITool } from "../pages/api/projects";
+import SectionHeader from "./Section/SectionHeader";
 import ProjectLink from "./Projects/ProjectLink";
 
 const Projects: FC = () => {
@@ -33,7 +34,8 @@ const Projects: FC = () => {
   );
 
   return (
-    <section className="flex flex-col pt-3">
+    <section className="space-y-10 xl:space-y-0  pt-3">
+      <SectionHeader>Projects</SectionHeader>
       <div className="flex flex-col items-center gap-y-40">
         {!error &&
           projects?.map(
