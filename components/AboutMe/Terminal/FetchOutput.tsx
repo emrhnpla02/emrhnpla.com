@@ -51,14 +51,8 @@ const FetchOutput: FC<IProps> = ({ afterMounted }) => {
             title="Languages"
             text="Html, Css, Javascript, Typescript, C#"
           />
-          <OutputItem
-            title="Libraries&Frameworks"
-            text="Tailwindcss, React, NextJS"
-          />
-          <OutputItem
-            title="Other Technologies"
-            text="Git, NodeJS, PostgreSQL, Redis"
-          />
+          <OutputItem title="Frontend" text="Tailwindcss, React, NextJS" />
+          <OutputItem title="Backend" text="NodeJS, PostgreSQL, Redis" />
         </div>
         <p className="text-nord9">
           ├──────────────────
