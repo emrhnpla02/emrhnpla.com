@@ -1,4 +1,4 @@
-import { FC, createContext, useState, useContext } from "react";
+import { type FC, createContext, useState, useContext } from "react";
 import { AnimatePresence } from "framer-motion";
 import { AppContext } from "./Layout";
 import NavigationLink from "./Header/NavigationLink";

@@ -1,4 +1,4 @@
-import { FC, ReactNode, useState, useContext } from "react";
+import { type FC, type ReactNode, useState, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { AboutMeContext } from "../../AboutMe";

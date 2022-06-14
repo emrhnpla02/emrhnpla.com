@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { type FC, useEffect } from "react";
 import { motion } from "framer-motion";
 import ProfilePicture from "../ProfilePicture";
 import OutputItem from "./OutputItem";

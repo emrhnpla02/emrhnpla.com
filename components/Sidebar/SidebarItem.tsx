@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { type FC, useContext } from "react";
 import { Icon } from "@iconify/react";
 import { AppContext } from "../Layout";
 

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import type { FC } from "react";
 import { Icon } from "@iconify/react";
 import SectionLink from "./SectionLink";
 

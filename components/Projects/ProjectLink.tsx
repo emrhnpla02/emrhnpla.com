@@ -1,4 +1,5 @@
 import type { FC } from "react";
+
 interface IProjectLinkProps {
   children: string;
   url: string;

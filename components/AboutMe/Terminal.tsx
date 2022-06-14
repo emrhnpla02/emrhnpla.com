@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { type FC, useState } from "react";
 import { motion } from "framer-motion";
 import TitleBar from "./Terminal/TitleBar";
 import Shell from "./Terminal/Shell";

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import type { FC } from "react";
 import { useParallaxController } from "react-scroll-parallax";
 
 const ProfilePicture: FC = () => {

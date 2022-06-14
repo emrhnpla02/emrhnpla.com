@@ -1,4 +1,4 @@
-import { FC, useId } from "react";
+import { type FC, useId } from "react";
 import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";

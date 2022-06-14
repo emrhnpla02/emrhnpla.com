@@ -1,4 +1,4 @@
-import { FC } from "react";
+import type { FC } from "react";
 import { useParallaxController } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import { slide, slideTransition } from "../../utils/variants";

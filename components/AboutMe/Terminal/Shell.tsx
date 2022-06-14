@@ -1,4 +1,4 @@
-import { FC, useState, useContext } from "react";
+import { type FC, useState, useContext } from "react";
 import { AboutMeContext } from "../../AboutMe";
 import ShellPrompt from "./ShellPrompt";
 import FetchOutput from "./FetchOutput";

@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { type FC, useContext } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { AppContext } from "../Layout";

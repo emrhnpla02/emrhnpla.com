@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
 import type { FC } from "react";
+import { motion } from "framer-motion";
 
 interface IProps {
   children: string;
