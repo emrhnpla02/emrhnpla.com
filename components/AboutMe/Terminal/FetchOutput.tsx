@@ -38,7 +38,7 @@ const FetchOutput: FC<IProps> = ({ afterMounted }) => {
           <OutputItem title="OS" text="Human" />
           <OutputItem title="Host" text="Earth/Turkey" />
           <OutputItem title="Kernel" text="0.0.1-male" />
-          <OutputItem title="Uptime" text="16 years" />
+          <OutputItem title="Uptime" text="17 years" />
           <OutputItem title="Locales" text="en_US.UTF-8, tr_TR.UTF-8" />
         </div>
         <p className="text-nord9">
