@@ -63,6 +63,7 @@ const Layout: NextPage<IProps> = ({ children }) => {
     <main className="relative h-full bg-nord5 dark:bg-nord16 font-rubik">
       <Head>
         <title>Emirhan P.</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <AppContext.Provider value={{ scrollFarFromTop, scrollTo }}>
         <Header />
