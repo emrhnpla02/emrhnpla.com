@@ -27,7 +27,7 @@ const AboutMe: FC = () => {
   useEffect(() => {
     if (width < LAYOUT_SCREEN_MEDIUM) setShowAlternate(true);
     else setShowAlternate(false);
-  }, [window.innerWidth]);
+  }, [width]);
 
   return (
     <section className="flex flex-row pt-12 pb-3">

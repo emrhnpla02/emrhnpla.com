@@ -87,7 +87,7 @@ const FetchOutput: FC<IProps> = ({ afterMounted }) => {
               <span className="duration-75 hover:bg-nord9 hover:bg-opacity-50 selection:hover:bg-nord9 selection:hover:bg-opacity-50">
                 feller
               </span>{" "}
-              who's interested in philosophy, music and nature.
+              who{"'"}s interested in philosophy, music and nature.
             </p>
           </div>
         </div>

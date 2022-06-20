@@ -8,7 +8,7 @@ const NavigationLink: FC = () => {
   const isOnHomepage = route === "/";
 
   return (
-    <Link href={isOnHomepage ? "/blog" : "/"}>
+    <Link href={isOnHomepage ? "/blog" : "/"} passHref>
       <motion.a
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}

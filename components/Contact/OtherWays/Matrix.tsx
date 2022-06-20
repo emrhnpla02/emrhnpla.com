@@ -6,7 +6,12 @@ const Matrix: FC = () => {
     <div className="flex flex-col gap-y-5">
       <h5 className="flex justify-center c-md:justify-start items-center text-4xl text-nord5">
         <span className="self-end text-2xl text-nord7">via</span>
-        <a href="https://matrix.org/" target="_blank" className="text-nord4">
+        <a
+          href="https://matrix.org/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-nord4"
+        >
           <span className="align-middle pl-3 pr-2">Matrix</span>
           <Icon
             icon="cib:matrix"
@@ -22,6 +27,7 @@ const Matrix: FC = () => {
         <a
           href="https://matrix.to/#/@emrhnpla02:matrix.org"
           target="_blank"
+          rel="noreferrer"
           className="w-full c-xl:w-6/12 px-5 py-3 font-bold transition-[color,border-color] duration-300 text-nord5 hover:text-nord0 dark:hover:text-nord10 border border-nord5 dark:border-nord5 hover:border-nord0 dark:hover:border-nord10"
         >
           Go to link

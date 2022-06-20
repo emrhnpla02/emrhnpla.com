@@ -35,6 +35,7 @@ const Alternate: FC = () => {
             onLoad={() => parallaxController?.update()}
             src="/catprogramming.gif"
             className="w-12 h-12 alt-xl:w-20 alt-xl:h-20 mr-3"
+            alt="Cat programming"
           />
           <span>Web Developer</span>
           <span className="mx-3 text-nord8">•</span>
@@ -43,6 +44,7 @@ const Alternate: FC = () => {
             onLoad={() => parallaxController?.update()}
             src="/tux.gif"
             className="w-8 h-8 alt-xl:w-12 alt-xl:h-12 alt-md:ml-3"
+            alt="Tux"
           />
         </motion.h4>
       </div>
@@ -57,7 +59,7 @@ const Alternate: FC = () => {
         <div className="absolute top-0 left-0 w-4/6 h-1/2 border-t-2 border-l-2 border-nord10 dark:border-nord8"></div>
         <div className="relative z-10 flex flex-col alt-xl:flex-row alt-xl:items-center gap-x-5 px-7 alt-xl:px-14 py-3 alt-xl:py-7">
           <p className="font-bold text-8xl alt-xl:text-9xl text-nord10 dark:text-nord8">
-            I'm
+            I{"'"}m
           </p>
           <div className="text-sm alt-lg:text-base text-nord0 dark:text-nord5">
             <p className="indent-3 alt-xl:indent-0">
@@ -86,7 +88,7 @@ const Alternate: FC = () => {
               <span className="duration-75 hover:bg-nord9 hover:bg-opacity-50 selection:hover:bg-nord9 selection:hover:bg-opacity-50">
                 feller
               </span>{" "}
-              who's interested in philosophy, music and nature.
+              who{"'"}s interested in philosophy, music and nature.
             </p>
           </div>
         </div>

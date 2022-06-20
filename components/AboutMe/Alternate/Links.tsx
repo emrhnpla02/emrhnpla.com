@@ -7,7 +7,7 @@ import type { ILink } from "../../../pages/api/links";
 const Links: FC = () => {
   const { links } = useContext(AboutMeContext);
 
-  const renderLinkItems = ({ id, href, icon, username }: ILink): ReactNode => {
+  const RenderLinkItems = ({ id, href, icon, username }: ILink): ReactNode => {
     const [selectedLink, setSelectedLink] = useState<Partial<ILink>>({});
     const selectedLinkEmpty = Object.keys(selectedLink).length <= 0;
     const isPositionLeft = id % 2 === 1;
@@ -88,7 +88,7 @@ const Links: FC = () => {
           onMouseEnter={() => setSelectedLink({ username })}
           onMouseLeave={() => setSelectedLink({})}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           <Icon icon={icon} className="w-10 h-10 alt-xl:w-12 alt-xl:h-12" />
         </motion.a>
@@ -98,7 +98,7 @@ const Links: FC = () => {
 
   return (
     <div className="absolute grid grid-cols-2 place-items-center gap-y-6 alt-xl:gap-y-12 rounded-full group">
-      {links?.map(renderLinkItems)}
+      {links?.map(RenderLinkItems)}
     </div>
   );
 };

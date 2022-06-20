@@ -13,7 +13,7 @@ const MobileNavLink: FC<IMobileNavLinkProps> = ({
   setShowMobileNavbar,
 }) => {
   return (
-    <Link href={isOnHomepage ? "/blog" : "/"}>
+    <Link href={isOnHomepage ? "/blog" : "/"} passHref>
       <motion.a
         href="/blog"
         initial={{ x: -30, opacity: 0 }}

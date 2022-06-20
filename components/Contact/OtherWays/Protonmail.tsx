@@ -11,6 +11,7 @@ const Protonmail: FC = () => {
         <a
           href="https://proton.me/mail"
           target="_blank"
+          rel="noreferrer"
           className="text-protonmail"
         >
           <span className="align-middle pl-3 pr-2">Protonmail</span>

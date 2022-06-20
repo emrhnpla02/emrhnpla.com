@@ -17,6 +17,7 @@ const Session: FC = () => {
         <a
           href="https://getsession.org/"
           target="_blank"
+          rel="noreferrer"
           className="text-session"
         >
           <span className="align-middle pl-3 pr-2">Session</span>

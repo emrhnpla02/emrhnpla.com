@@ -14,7 +14,7 @@ const ErrorPage: FC<IProps> = ({ children, errorCode }) => {
       transition={{ duration: 1 }}
       className="flex flex-col sm:flex-row place-self-center gap-x-20 box-content w-4/5 xl:w-3/5 min-h-[24rem] pl-10 pr-3 py-20 bg-gradient-to-br from-nord5 dark:from-nord1 via-nord7 to-nord10 border rounded-3xl border-nord0 dark:border-nord5"
     >
-      <img src="/sadpepe.svg" className="max-h-60 lg:max-h-96" />
+      <img src="/sadpepe.svg" className="max-h-60 lg:max-h-96" alt="Sad pepe"/>
       <div className="space-y-10 w-full">
         <div className="text-center sm:text-left space-y-3 sm:space-y-0 pt-3 sm:pt-0">
           <h2 className="font-bold text-8xl sm:text-7xl text-[#5B8B3B]">

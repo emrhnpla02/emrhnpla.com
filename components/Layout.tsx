@@ -57,7 +57,7 @@ const Layout: NextPage<IProps> = ({ children }) => {
     parallaxContainer?.addEventListener("scroll", () => handleScroll());
     return () =>
       parallaxContainer?.removeEventListener("scroll", () => handleScroll());
-  }, []);
+  }, [handleScroll]);
 
   return (
     <main className="relative h-full bg-nord5 dark:bg-nord16 font-rubik">
