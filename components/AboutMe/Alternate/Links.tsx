@@ -1,8 +1,7 @@
 import { type FC, type ReactNode, useState, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Icon } from "@iconify/react";
-import { AboutMeContext } from "../../AboutMe";
-import type { ILink } from "../../../pages/api/links";
+import { type ILink, AboutMeContext } from "../../AboutMe";
 
 const Links: FC = () => {
   const { links } = useContext(AboutMeContext);

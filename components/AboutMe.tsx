@@ -1,12 +1,18 @@
 import { type FC, createContext, useState, useEffect } from "react";
-import useSWR from "swr";
 import { AnimatePresence } from "framer-motion";
 import { useWidth } from "../hooks/useWidth";
-import { fetcher } from "../utils/fetcher";
-import type { ILink } from "../pages/api/links";
+import links from "../public/json/links.json";
 import Terminal from "./AboutMe/Terminal";
 import Links from "./AboutMe/Links";
 import Alternate from "./AboutMe/Alternate";
+
+export interface ILink {
+  id: number;
+  name: string;
+  username: string;
+  icon: string;
+  href: string;
+}
 
 interface IAboutMeContext {
   setShowAlternate: (state: boolean) => void;
@@ -21,8 +27,6 @@ const AboutMe: FC = () => {
   const [showLinks, setShowLinks] = useState(false);
   const width = useWidth();
   const LAYOUT_SCREEN_MEDIUM = 768;
-
-  const { data: links } = useSWR("/api/links", fetcher);
 
   useEffect(() => {
     if (width < LAYOUT_SCREEN_MEDIUM) setShowAlternate(true);

@@ -2,7 +2,6 @@ import { type FC, useContext } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { AboutMeContext } from "../AboutMe";
-import type { ILink } from "../../pages/api/links";
 import { slide, slideTransition } from "../../utils/variants";
 
 const Links: FC = () => {
@@ -10,7 +9,7 @@ const Links: FC = () => {
 
   return (
     <div className="w-5/12 flex flex-col justify-center items-center gap-y-5">
-      {links?.map(({ id, href, icon, name, username }: ILink) => (
+      {links?.map(({ id, href, icon, name, username }) => (
         <motion.a
           variants={slide}
           initial="right"

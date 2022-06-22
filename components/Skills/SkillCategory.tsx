@@ -1,7 +1,13 @@
 import type { FC } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
-import type { ISkill } from "../../pages/api/skills";
+
+interface ISkill {
+  id: number;
+  name: string;
+  icon: string;
+  color?: string;
+}
 
 interface IProps {
   categoryName: string;
