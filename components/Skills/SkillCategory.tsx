@@ -46,4 +46,5 @@ const SkillCategory: FC<IProps> = ({ categoryName, description, skills }) => {
     </motion.div>
   );
 };
+
 export default SkillCategory;

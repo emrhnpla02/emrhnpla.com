@@ -72,7 +72,7 @@ const Layout: NextPage<IProps> = ({ children }) => {
             scrollFarFromTop
               ? "top-12 h-[calc(100%-3rem)]"
               : "top-16 h-[calc(100%-4rem)]"
-          } grid grid-cols-1 gap-y-[20rem] w-full xl:w-[calc(100%-7rem)] ${
+          } grid grid-cols-1 gap-y-[25rem] w-full xl:w-[calc(100%-7rem)] ${
             showScrollbar ? "overflow-y-scroll" : "overflow-y-hidden"
           } scroll-smooth scrollbar-thin scrollbar-thumb-nord1 hover:scrollbar-thumb-nord0 scrollbar-track-nord10`}
           id="parallax"
