@@ -1,4 +1,4 @@
-import { type FC, createContext, useState, useEffect } from "react";
+import { type FC, createContext, useState, useEffect, useMemo } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useWidth } from "../hooks/useWidth";
 import links from "../public/json/links.json";
@@ -33,11 +33,14 @@ const AboutMe: FC = () => {
     else setShowAlternate(false);
   }, [width]);
 
+  const providerValue = useMemo(
+    () => ({ setShowAlternate, setShowLinks, links }),
+    [setShowAlternate, setShowLinks]
+  );
+
   return (
     <section className="flex flex-row pt-12">
-      <AboutMeContext.Provider
-        value={{ setShowAlternate, setShowLinks, links }}
-      >
+      <AboutMeContext.Provider value={providerValue}>
         <AnimatePresence exitBeforeEnter>
           {!showAlternate ? (
             <>

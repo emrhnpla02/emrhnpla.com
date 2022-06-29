@@ -5,6 +5,7 @@ import {
   createContext,
   useState,
   useEffect,
+  useMemo,
   useCallback,
   useRef,
 } from "react";
@@ -59,13 +60,18 @@ const Layout: NextPage<IProps> = ({ children }) => {
       parallaxContainer?.removeEventListener("scroll", () => handleScroll());
   }, [handleScroll]);
 
+  const providerValue = useMemo(
+    () => ({ scrollFarFromTop, scrollTo }),
+    [scrollFarFromTop, scrollTo]
+  );
+
   return (
     <main className="relative h-full bg-nord5 dark:bg-nord16 font-rubik">
       <Head>
         <title>Emirhan P.</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AppContext.Provider value={{ scrollFarFromTop, scrollTo }}>
+      <AppContext.Provider value={providerValue}>
         <Header />
         <section
           className={`fixed transition-[top,background-color,color] ${

@@ -1,4 +1,4 @@
-import { type FC, createContext, useState, useContext } from "react";
+import { type FC, createContext, useState, useContext, useMemo } from "react";
 import { AnimatePresence } from "framer-motion";
 import { AppContext } from "./Layout";
 import NavigationLink from "./Header/NavigationLink";
@@ -17,6 +17,11 @@ const Header: FC = () => {
 
   const { scrollFarFromTop } = useContext(AppContext);
 
+  const providerValue = useMemo(
+    () => ({ setShowMobileNavbar }),
+    [setShowMobileNavbar]
+  );
+
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-[height,background-color,color] ${
@@ -28,7 +33,7 @@ const Header: FC = () => {
         showMobileNavbar={showMobileNavbar}
         setShowMobileNavbar={setShowMobileNavbar}
       />
-      <HeaderContext.Provider value={{ setShowMobileNavbar }}>
+      <HeaderContext.Provider value={providerValue}>
         <AnimatePresence>
           {showMobileNavbar && <MobileNavbar />}
         </AnimatePresence>
