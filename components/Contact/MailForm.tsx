@@ -78,7 +78,7 @@ const MailForm: FC = () => {
                   className="flex justify-between items-center pl-2 pb-3 text-2xl text-nord5"
                 >
                   Name:
-                  <ErrorText className="hidden c-lg:block pr-3">
+                  <ErrorText className="self-end hidden c-lg:block pr-3">
                     <ErrorMessage name="name" />
                   </ErrorText>
                 </label>
@@ -103,7 +103,7 @@ const MailForm: FC = () => {
                   className="flex justify-between items-center pl-2 pb-3 text-2xl text-nord5"
                 >
                   Email:
-                  <ErrorText className="hidden c-lg:block pr-3">
+                  <ErrorText className="self-end hidden c-lg:block pr-3">
                     <ErrorMessage name="email" />
                   </ErrorText>
                 </label>
@@ -129,7 +129,7 @@ const MailForm: FC = () => {
                 className="flex justify-between items-center pl-2 pb-3 text-2xl text-nord5"
               >
                 Subject:
-                <ErrorText className="hidden c-lg:block pr-3">
+                <ErrorText className="self-end hidden c-lg:block pr-3">
                   <ErrorMessage name="subject" />
                 </ErrorText>
               </label>
@@ -154,7 +154,7 @@ const MailForm: FC = () => {
                 className="flex justify-between items-center pl-2 pb-3 text-2xl text-nord5"
               >
                 Message:
-                <ErrorText className="hidden c-lg:block pr-3">
+                <ErrorText className="self-end hidden c-lg:block pr-3">
                   <ErrorMessage name="message" />
                 </ErrorText>
               </label>
