@@ -93,7 +93,7 @@ const MailForm: FC = () => {
                       : "focus:border-nord7 dark:focus:border-nord10"
                   } outline-none`}
                 />
-                <ErrorText className="block c-lg:hidden pl-3">
+                <ErrorText className="block c-lg:hidden pl-3 pt-2">
                   <ErrorMessage name="name" />
                 </ErrorText>
               </div>
@@ -118,7 +118,7 @@ const MailForm: FC = () => {
                       : "focus:border-nord7 dark:focus:border-nord10"
                   } outline-none`}
                 />
-                <ErrorText className="block c-lg:hidden pl-3">
+                <ErrorText className="block c-lg:hidden pl-3 pt-2">
                   <ErrorMessage name="email" />
                 </ErrorText>
               </div>
@@ -144,7 +144,7 @@ const MailForm: FC = () => {
                     : "focus:border-nord7 dark:focus:border-nord10"
                 } outline-none`}
               />
-              <ErrorText className="block c-lg:hidden pl-3">
+              <ErrorText className="block c-lg:hidden pl-3 pt-2">
                 <ErrorMessage name="subject" />
               </ErrorText>
             </div>
@@ -170,7 +170,7 @@ const MailForm: FC = () => {
                     : "focus:border-nord7 dark:focus:border-nord10"
                 } outline-none`}
               />
-              <ErrorText className="block c-lg:hidden pl-3">
+              <ErrorText className="block c-lg:hidden pl-3 pt-2">
                 <ErrorMessage name="message" />
               </ErrorText>
             </div>
