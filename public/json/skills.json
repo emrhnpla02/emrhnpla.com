@@ -51,8 +51,8 @@
     },
     {
       "id": 2,
-      "name": "Postgresql",
-      "icon": "logos:postgresql"
+      "name": "Supabase",
+      "icon": "logos:supabase-icon"
     },
     {
       "id": 3,
