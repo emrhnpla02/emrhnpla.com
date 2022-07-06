@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC, ReactNode } from "react";
 
 interface IProjectLinkProps {
   children: string;
