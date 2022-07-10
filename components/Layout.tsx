@@ -29,7 +29,7 @@ const Layout: NextPage<IProps> = ({ children }) => {
   const [scrollFarFromTop, setScrollFarFromTop] = useState(false);
   const [showScrollbar, setShowScrollbar] = useState(false);
   const [parallaxContainer, setParallaxContainer] = useState<HTMLElement>();
-  const parallaxContainerRef = useRef<HTMLElement>(null);
+  const parallaxContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setTimeout(() => setShowScrollbar(true), 2000);
@@ -69,10 +69,33 @@ const Layout: NextPage<IProps> = ({ children }) => {
       <Head>
         <title>Emirhan P.</title>
         <link rel="icon" href="/favicon.ico" />
+
+        {/* SEO Optimization */}
+        <meta name="author" content="Emirhan Pala" />
+        <meta
+          name="keywords"
+          content="Emirhan Pala, Web Developer, Front-end Developer, Blogging"
+        />
+        <meta
+          name="description"
+          content="Emirhan Pala's personal website for portfolio and blogging"
+        />
+
+        {/* OG Meta Tags */}
+        <meta
+          property="og:title"
+          content="Emirhan Pala | Portfolio & Blogging"
+        />
+        <meta
+          property="og:description"
+          content="Emirhan Pala's personal website for portfolio and blogging"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/emrhnpla-com.jpg" />
       </Head>
       <AppContext.Provider value={providerValue}>
         <Header />
-        <section
+        <div
           className={`fixed transition-[top,background-color,color] ${
             scrollFarFromTop
               ? "top-12 h-[calc(100%-3rem)]"
@@ -90,7 +113,7 @@ const Layout: NextPage<IProps> = ({ children }) => {
           >
             {children}
           </ParallaxProvider>
-        </section>
+        </div>
         <Sidebar />
       </AppContext.Provider>
     </main>

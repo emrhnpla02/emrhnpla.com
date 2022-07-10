@@ -1,25 +1,10 @@
 import type { FC } from "react";
-import { Icon } from "@iconify/react";
+import WayHeader from "./WayHeader";
 
 const Matrix: FC = () => {
   return (
-    <div className="flex flex-col gap-y-5">
-      <h5 className="flex justify-center c-md:justify-start items-center text-4xl text-nord5">
-        <span className="self-end text-2xl text-nord7">via</span>
-        <a
-          href="https://matrix.org/"
-          target="_blank"
-          rel="noreferrer"
-          className="text-nord4"
-        >
-          <span className="align-middle pl-3 pr-2">Matrix</span>
-          <Icon
-            icon="cib:matrix"
-            strokeWidth="2"
-            className="inline w-10 h-10"
-          />
-        </a>
-      </h5>
+    <section className="flex flex-col gap-y-5 py-10">
+      <WayHeader name="Matrix" icon="cib:matrix" href="https://matrix.org/" />
       <div className="flex flex-col c-xl:flex-row justify-between items-center gap-y-5 c-xl:gap-y-0 text-center text-nord5">
         <span className="w-full c-xl:w-5/12 break-all text-lg">
           @emrhnpla02:matrix.org
@@ -33,7 +18,7 @@ const Matrix: FC = () => {
           Go to link
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 

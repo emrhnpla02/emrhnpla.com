@@ -24,7 +24,7 @@ const Sidebar: FC = () => {
   };
 
   return (
-    <motion.aside
+    <motion.nav
       variants={variants}
       initial="hidden"
       animate="visible"
@@ -44,7 +44,7 @@ const Sidebar: FC = () => {
       <SidebarItem page={3} icon="simple-icons:protonmail">
         Contact
       </SidebarItem>
-    </motion.aside>
+    </motion.nav>
   );
 };
 export default Sidebar;

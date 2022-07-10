@@ -13,7 +13,7 @@ const MobileNavbar: FC = () => {
   const isOnHomepage = route === "/";
 
   return (
-    <motion.div
+    <motion.ul
       initial={{ height: 0 }}
       animate={{ height: isOnHomepage ? "16rem" : "5rem" }}
       exit={{ height: 0, transition: { delay: 0.3 } }}
@@ -42,7 +42,7 @@ const MobileNavbar: FC = () => {
         isOnHomepage={isOnHomepage}
         setShowMobileNavbar={setShowMobileNavbar}
       />
-    </motion.div>
+    </motion.ul>
   );
 };
 

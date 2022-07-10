@@ -7,12 +7,12 @@ const Projects: FC = () => {
   return (
     <section className="space-y-10 xl:space-y-0 pt-3">
       <SectionHeader>Projects</SectionHeader>
-      <div className="flex flex-col items-center gap-y-40">
+      <article className="flex flex-col items-center gap-y-40">
         {projects.map((project, index) => (
           <Project project={project} index={index} key={project.id} />
         ))}
         <Project />
-      </div>
+      </article>
     </section>
   );
 };

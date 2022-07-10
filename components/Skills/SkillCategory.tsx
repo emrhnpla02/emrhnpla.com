@@ -17,7 +17,7 @@ interface IProps {
 
 const SkillCategory: FC<IProps> = ({ categoryName, description, skills }) => {
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0, y: 70 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -27,9 +27,9 @@ const SkillCategory: FC<IProps> = ({ categoryName, description, skills }) => {
       <h2 className="px-7 font-bold text-center text-3xl transition-[color] text-nord0 dark:text-nord5 group-hover:text-nord10 group-hover:dark:text-nord8 animate__border group-hover:animate__borderDefault">
         {categoryName}
       </h2>
-      <div className="grid grid-cols-2 sk-lg:group-last:grid-flow-col gap-10 px-7">
+      <ul className="grid grid-cols-2 sk-lg:group-last:grid-flow-col gap-10 px-7">
         {skills?.map(({ id, name, icon, color }) => (
-          <div
+          <li
             key={id}
             className={`${
               skills.length % 2 === 1 && "last:col-span-2"
@@ -37,13 +37,13 @@ const SkillCategory: FC<IProps> = ({ categoryName, description, skills }) => {
           >
             <Icon icon={icon} className="w-12 h-12" color={color} />
             <span className="text-lg text-nord0 dark:text-nord5">{name}</span>
-          </div>
+          </li>
         ))}
-      </div>
-      <p className="w-full pt-4 text-center text-nord0 dark:text-nord5 border-t border-nord0 dark:border-nord5 group-hover:!border-nord10">
+      </ul>
+      <footer className="w-full pt-4 text-center text-nord0 dark:text-nord5 border-t border-nord0 dark:border-nord5 group-hover:!border-nord10">
         {description}
-      </p>
-    </motion.div>
+      </footer>
+    </motion.section>
   );
 };
 

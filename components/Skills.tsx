@@ -7,7 +7,7 @@ const Skills: FC = () => {
   return (
     <section className="space-y-10 xl:space-y-0 pt-3">
       <SectionHeader>Skills</SectionHeader>
-      <div className="grid grid-rows-1 grid-cols-1 sk-md:grid-cols-2 sk-lg:!grid-cols-3 place-items-center gap-y-10 w-full">
+      <article className="grid grid-rows-1 grid-cols-1 sk-md:grid-cols-2 sk-lg:!grid-cols-3 place-items-center gap-y-10 w-full">
         <SkillCategory
           categoryName="Languages"
           skills={skills.languages}
@@ -28,7 +28,7 @@ const Skills: FC = () => {
           skills={skills.devEnv}
           description="Tools I use for web development"
         />
-      </div>
+      </article>
     </section>
   );
 };

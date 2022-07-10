@@ -14,13 +14,13 @@ const SectionLinks: FC<IProps> = ({
   const toggleMobileNavbar = () => setShowMobileNavbar(!showMobileNavbar);
 
   return (
-    <div className="h-xl:w-1/2 flex justify-center">
+    <nav className="h-xl:w-1/2 flex justify-center">
       <Icon
         icon="fluent:navigation-16-filled"
         className="block h-xl:hidden w-10 h-10 cursor-pointer"
         onClick={toggleMobileNavbar}
       />
-      <div className="hidden h-xl:flex xl:!hidden justify-evenly items-center w-full">
+      <ul className="hidden h-xl:flex xl:!hidden justify-evenly items-center w-full">
         <SectionLink page={0} icon="akar-icons:person">
           About Me
         </SectionLink>
@@ -33,8 +33,8 @@ const SectionLinks: FC<IProps> = ({
         <SectionLink page={3} icon="simple-icons:protonmail">
           Contact
         </SectionLink>
-      </div>
-    </div>
+      </ul>
+    </nav>
   );
 };
 

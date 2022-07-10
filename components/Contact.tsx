@@ -13,10 +13,9 @@ const Contact: FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="flex flex-col c-md:flex-row gap-x-0 c-md:gap-x-16 gap-y-10 c-md:gap-y-0 h-fit c-md:h-full px-5 c-md:px-20 py-10 bg-nord10 dark:bg-nord0"
+        className="flex flex-col c-md:flex-row gap-y-10 c-md:gap-y-0 h-fit c-md:h-full px-5 c-md:px-20 py-10 bg-nord10 dark:bg-nord0 c-md:divide-x divide-nord5"
       >
         <MailForm />
-        <div className="hidden c-md:block h-full border-r border-nord5" />
         <OtherWays />
       </motion.div>
     </section>

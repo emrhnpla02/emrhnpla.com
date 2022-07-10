@@ -25,7 +25,7 @@ const Terminal: FC = () => {
   };
 
   return (
-    <motion.div
+    <motion.article
       variants={variants}
       initial="hidden"
       animate="visible"
@@ -35,7 +35,7 @@ const Terminal: FC = () => {
       <TitleBar highlightButton={highlightButton} />
       <Shell setHighlightButton={setHighlightButton} />
       <TerminalDecoration />
-    </motion.div>
+    </motion.article>
   );
 };
 

@@ -13,7 +13,7 @@ const SectionLink: FC<IProps> = ({ children, page, icon }) => {
   const { scrollFarFromTop, scrollTo } = useContext(AppContext);
 
   return (
-    <motion.div
+    <motion.li
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", duration: 1 }}
@@ -39,7 +39,7 @@ const SectionLink: FC<IProps> = ({ children, page, icon }) => {
           </motion.span>
         )}
       </AnimatePresence>
-    </motion.div>
+    </motion.li>
   );
 };
 

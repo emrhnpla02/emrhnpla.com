@@ -8,7 +8,7 @@ const Links: FC = () => {
   const { links } = useContext(AboutMeContext);
 
   return (
-    <div className="w-5/12 flex flex-col justify-center items-center gap-y-5">
+    <nav className="w-5/12 flex flex-col justify-center items-center gap-y-5">
       {links?.map(({ id, href, icon, name, username }) => (
         <motion.a
           variants={slide}
@@ -31,7 +31,7 @@ const Links: FC = () => {
           </p>
         </motion.a>
       ))}
-    </div>
+    </nav>
   );
 };
 

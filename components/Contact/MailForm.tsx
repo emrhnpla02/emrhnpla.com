@@ -60,7 +60,7 @@ const MailForm: FC = () => {
       }}
     >
       {({ errors, isSubmitting, isValid, dirty }) => (
-        <Form className="flex flex-col gap-y-10 c-md:gap-y-3 w-full c-md:w-7/12 group">
+        <Form className="flex flex-col gap-y-10 c-md:gap-y-3 w-full c-md:w-7/12 c-md:pr-10 group">
           <h4 className="text-center c-md:text-left w-full c-md:pl-3 pb-3 text-5xl transition-[color] duration-200 text-nord5 dark:text-nord5 group-hover:text-nord8 dark:group-hover:text-nord10 animate__border group-hover:animate__borderFromLeft">
             <span className="align-middle">
               <span className="text-2xl transition-[color] duration-200 text-nord7 group-hover:text-nord8 dark:group-hover:text-nord10">
