@@ -49,7 +49,7 @@ const Project: FC<IProps> = ({ project }, index) => {
     toolsIndex: number
   ) => (
     <div
-      key={toolName}
+      key={toolIcon}
       className={`${
         toolsIndex % 2 === 0
           ? "last:col-span-2 p-sm:last:col-span-1 p-xl:last:!col-span-2"
